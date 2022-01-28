@@ -1,3 +1,8 @@
+date1 = input().split()
+date1 = list(map(int, date1))
+date2 = input().split()
+date2 = list(map(int, date2))
+
 if len(date1)!=3:
     date1.insert(0,0)
 elif len(date2)!=3:
@@ -5,8 +10,7 @@ elif len(date2)!=3:
 if date1[2]==date2[2]:
     if date2[1]>date1[1]:
         print(0)
-        print(" ss" )
-        
+    
     elif date2[1]<date1[1]:
         print(500*(date1[1]-date2[1]))
     
@@ -24,4 +28,6 @@ elif date1[2]!=date2[2]:
     elif date2[2]>date1[2]:
         print(0)
     
+        
+
         
