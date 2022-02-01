@@ -18,16 +18,11 @@ def gradingStudents(grades):
     for i in grades:
         result = ((i//5)*5)+5
         check = result - i
-        if i%5==0:
-            grade.append(i)
-        elif i<38 or check>3:
+        if i<=33 or check>3 or check==3 or i%5==0:
             grade.append(i)
         elif check<3:
             grade.append(result) 
-        elif check==3:
-            grade.append(i)
     return grade
-        
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
